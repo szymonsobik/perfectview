@@ -33,7 +33,7 @@ function navigation() {
 
 function topShadow() { 
     var scroll = $(window).scrollTop(),
-        pageHeight = $(window).outerHeight();
+        pageHeight = $(window).outerHeight() - 40;
 
     if (scroll <= pageHeight) {
         $('.topBar').removeClass('shadow');
