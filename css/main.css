@@ -77,8 +77,17 @@ img {
 
 .topBar {
     padding: 18px;
-    position: relative;
-    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000000;
+    transition: all .5s ease;
+}
+
+.topBar.shadow {
+    background: rgba(0,0,0,0.5);
+    transition: all .5s ease;
 }
 
 .navHead,
@@ -141,7 +150,7 @@ img {
 }
 
 .navBox {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 25vw;
@@ -150,7 +159,7 @@ img {
     padding: 45px;
     transform: translateX(0);
     transition: all .5s ease-in-out;
-    z-index: 10000;
+    z-index: 1000000;
 }
 
 .navBox.hide {
