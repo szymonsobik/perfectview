@@ -2,6 +2,7 @@ $(document).ready(function() {
     navBar();
     navigation();
     topShadow();
+    $('.dummy').viewportChecker();
 });
 
 $(window).scroll(function() {
@@ -19,7 +20,7 @@ function navBar() {
 }
 
 function navigation() {
-    $('body').on('click', '.navigation a', function(e) {
+    $('body').on('click', '.scrollPage', function(e) {
         var section = $(this).attr("href");
         $('html, body').animate({
             scrollTop: $(section).offset().top
